@@ -56,14 +56,14 @@ variable "network_details" {
       name          = "network2"
       address_space = ["10.2.0.0/16"]
       dns_servers   = ["10.2.0.4", "10.2.0.5"]
-      is_hub        = true
+      is_hub        = false
       subnet_details = {
         "sub1" = {
           sub_name           = "subnet1"
           sub_address_prefix = ["10.2.1.0/24"]
         },
 
-        "sub2" = {
+        "sub2" = { 
           sub_name           = "subnet2"
           sub_address_prefix = ["10.2.2.0/24"]
         }
