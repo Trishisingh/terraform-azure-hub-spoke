@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "network" {
   count    = var.existing_resource_group_name == null ? 1 : 0
   name     = var.resource_group_name
   location = var.resource_group_location
-  # tags     = var.tags
+   #tags     = var.tags
 }
 
 

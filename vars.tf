@@ -68,6 +68,23 @@ variable "network_details" {
           sub_address_prefix = ["10.2.2.0/24"]
         }
 
+    } },
+        "network3" = {
+      name          = "network3"
+      address_space = ["10.3.0.0/16"]
+      dns_servers   = ["10.3.0.4", "10.3.0.5"]
+      is_hub        = false
+      subnet_details = {
+        "sub1" = {
+          sub_name           = "subnet5"
+          sub_address_prefix = ["10.3.1.0/24"]
+        },
+
+        "sub2" = { 
+          sub_name           = "subnet6"
+          sub_address_prefix = ["10.3.2.0/24"]
+        }
+
     } }
 
   }
