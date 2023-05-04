@@ -18,6 +18,24 @@ variable "resource_group_location" {
 }
 
 
+variable "create_hub_fw" {
+  description = "weather to create a Azure fierwall in hub network"
+  type        = bool
+  default     = true
+}
+
+variable "fw_public_ip_name" {
+  description = "public IP name for Azure firewall"
+  type        = string
+  default     = "testip"
+}
+
+variable "hub_fw_address_prefixes" {
+  description = "Addess prefix for hub azure firewall"
+  type        = list(string)
+  default     = ["10.1.20.0/26"]
+}
+
 variable "network_details" {
   type = map(object({
     name          = string
@@ -63,13 +81,13 @@ variable "network_details" {
           sub_address_prefix = ["10.2.1.0/24"]
         },
 
-        "sub2" = { 
+        "sub2" = {
           sub_name           = "subnet2"
           sub_address_prefix = ["10.2.2.0/24"]
         }
 
     } },
-        "network3" = {
+    "network3" = {
       name          = "network3"
       address_space = ["10.3.0.0/16"]
       dns_servers   = ["10.3.0.4", "10.3.0.5"]
@@ -80,7 +98,7 @@ variable "network_details" {
           sub_address_prefix = ["10.3.1.0/24"]
         },
 
-        "sub2" = { 
+        "sub2" = {
           sub_name           = "subnet6"
           sub_address_prefix = ["10.3.2.0/24"]
         }
