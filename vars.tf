@@ -28,7 +28,7 @@ variable "create_fw_public_ip" {
   description = "weather to create a  public IP for Azure fierwall in hub network"
   type        = bool
   default     = false
-} 
+}
 variable "fw_public_ip_name" {
   description = "public IP name for Azure firewall"
   type        = string
