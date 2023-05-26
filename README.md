@@ -1,5 +1,7 @@
 # terraform-azure-hub-spoke
 <!-- BEGIN_TF_DOCS -->
+
+[![Terraform](https://github.com/Trishisingh/terraform-azure-hub-spoke/actions/workflows/terraform.yml/badge.svg?branch=main)](https://github.com/Trishisingh/terraform-azure-hub-spoke/actions/workflows/terraform.yml)
 ## Requirements
 
 | Name | Version |
